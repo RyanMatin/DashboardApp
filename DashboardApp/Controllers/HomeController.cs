@@ -6,19 +6,26 @@ namespace DashboardApp.Controllers
 {
   public class HomeController : Controller
   {
-    public ActionResult Index()
-    {
-      var db = new DashboardAppEntities();
-      var dashboardReport = new DashboardReport
-      {
-        NewComments = db.Comments.Count(),
-        NewTasks = db.Tasks.Count(),
-        NewOrders = db.Orders.Count(),
-        SupportTickets = db.SupportTickets.Count()
-      };
+        //public ActionResult Index()
+        //{
+        //  var db = new DashboardAppEntities();
+        //  var dashboardReport = new DashboardReport
+        //  {
+        //    NewComments = db.Comments.Count(),
+        //    NewTasks = db.Tasks.Count(),
+        //    NewOrders = db.Orders.Count(),
+        //    SupportTickets = db.SupportTickets.Count()
+        //  };
 
-      ViewBag.Title = "Home";
-      return View(dashboardReport);
+        //  ViewBag.Title = "Home";
+        //  return View(dashboardReport);
+        //}
+
+        public ActionResult Index()
+        {
+            ViewBag.Title = "Home";
+            return View();
+        }
+
     }
-  }
 }
